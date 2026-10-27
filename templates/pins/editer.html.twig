@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panterst{% endblock %}
+
+{% block body %}
+<h1> Editer Pin {{pine.id}} </h1>
+  {{ include ('pins/_forms.html.twig')}}
+{% endblock %}

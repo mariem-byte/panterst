@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panterst{% endblock %}
+
+{% block body %}
+
+<h1>All pines</h1>
+{{app.user }}
+
+<div class="row">
+{% if pines|length >0 %}
+{% for pin in pines %}
+<article class="col-md-4">
+<a href={{path('app_show',{'id':pin.id})}}>{{pin.title}} </h2></a>
+<p>{{pin.description}} </p>  
+<p> Owned by {{pin.user.firstName}}{{pin.user.lastName}}</p>
+</article>
+{% endfor %}
+
+{% else %}
+
+No pins yet be the first to create <a href={{path('app_create')}}> create pin </a>
+ {% endif %}
+
+
+{% endblock %}

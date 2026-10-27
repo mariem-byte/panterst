@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panterst{% endblock %}
+
+{% block body %}
+<h1>All pins</h1>
+
+<article>{{pine.title}} </h2></a>
+<p>{{pine.description}} </p>
+
+<h1><a href="{{path('app_editer',{'id':pine.id})}}"> editer </a> </h1>
+<a href="#" onclick="event.preventDefault(); confirm('are you sure')&& document.getElementById('js-pin-delete-form').submit();">delete </a>
+<form id="js-pin-delete-form" action="{{path('app_remove',{'id':pine.id})}}" method="POST" style="display:none;">
+<input type="submit" value="Delete"/>
+</form>
+</article>
+
+{% endblock %}
