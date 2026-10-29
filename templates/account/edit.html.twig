@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Edit User Account{% endblock %}
+
+{% block body %}
+{{form_start(form)}}
+<div class="row">
+<div class="col-md-6">
+ {{form_row(form.firstName)}}
+</div>
+
+
+<div class="col-md-6">
+ {{form_row(form.lastName)}}
+</div>
+</div><br>
+{{form_row(form.email)}} <br>
+<button type="submit" class="btn btn-primary btn-lg btn-block">Apply changes </button> 
+{{form_end(form)}}
+{% endblock %}
+

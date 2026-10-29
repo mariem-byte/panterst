@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body %}
+ <div class="row">
+ <div class="col-md-6 mx-auto text-center">
+  <h1 class="my-5">Profile </h1>
+   <img src="/images/userphoto.jpg" alt=""/>
+   <p> {{app.user.email }}</p>
+   <p> {{app.user.FullName}}</p>
+   
+  <p> <a href="{{path('app_account_edit')}}">Edit Account</a>|<a href="">Change Password</a>  </p>
+ </div>
+ </div>
+{% endblock %}
